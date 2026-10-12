@@ -34,7 +34,7 @@
          with:
            name: ipl-match-winner-ml-artifacts
            path: |
-             ipl_winner_model.pkl
+             ipl_winner_model_missing.pkl
              metrics.json
              ipl_model_data.csv
            if-no-files-found: error
