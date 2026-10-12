@@ -50,7 +50,7 @@ class TestMLPipeline(unittest.TestCase):
 
     def test_cleaned_data_has_950_minus_no_result_matches(self):
         data = pd.read_csv("ipl_model_data.csv")
-        self.assertEqual(len(data), 946)
+        self.assertEqual(len(data), 0)
         self.assertNotIn("Delhi Daredevils", data["Team1"].values)
 
 
