@@ -38,11 +38,14 @@ jobs:
           cp ipl_winner_model.pkl release_candidate/
           cp metrics.json release_candidate/
           cp requirements.txt release_candidate/
+          cp Dockerfile release_candidate/
+          cp .dockerignore release_candidate/
           printf "IPL Match Winner Prediction ML Application\nRun: python app.py\nEndpoint: POST /predict\n" > release_candidate/DEPLOYMENT.txt
       - name: Upload release candidate
         uses: actions/upload-artifact@v7
         with:
           name: ipl-match-winner-ml-release
           path: release_candidate/
+          include-hidden-files: true
           if-no-files-found: error
           retention-days: 7
